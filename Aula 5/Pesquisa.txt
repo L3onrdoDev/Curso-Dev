@@ -1,0 +1,4 @@
+Oque é Clean Code
+Para que serve no python
+Modo certo de usar
+Como aplicar o metodo
