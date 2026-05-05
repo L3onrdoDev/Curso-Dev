@@ -2,7 +2,7 @@ from pathlib import Path
 
 def criar_pasta_aula():
     # 1. Define o caminho base onde tudo será criado
-    diretorio_base = Path(r"C:\Users\51446093840\Desktop\Leonardo Barbosa [Castello]")
+    diretorio_base = Path(r"C:\Users\51446093840\Desktop\Leonardo Barbosa [Castello]\1° Termo")
     
     # 2. Pede o número da aula
     numero = input("Digite o número da aula: ").strip()
