@@ -127,7 +127,7 @@
 
 # Melhorado
 # pontos = 50
-# print(f"Parabéns! Você fez {pontos:,} pontos.")
+# print(f"Parabéns! Você fez {pontos} pontos.")
 
 
 # ----------------------------------------------------
