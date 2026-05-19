@@ -235,3 +235,5 @@
 #     tentativas -= 1
 # else:
 #     print("Acesso bloqueado. Muitas tentativas falhas.")
+
+

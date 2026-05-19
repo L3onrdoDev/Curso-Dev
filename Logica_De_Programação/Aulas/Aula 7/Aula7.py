@@ -27,40 +27,57 @@
 # # Revisão do código
 
 print("----- Seja Bem-Vindo(a) Ao Shopping Center -----")
-print("    ----- Digite as informações abaixo -----")
+print("----- Digite as informações abaixo -----")
 
-informacoes_princ = input("Digite a placa do veiculo:  ")
-informacoes_princ2 = input("Digite o modelo do veiculo:  ")
-informacoes_princ3 = input("Digite a cor do veiculo:  ")
+placa = input("Digite a placa do veículo: ")
+modelo = input("Digite o modelo do veículo: ")
+cor = input("Digite a cor do veículo: ")
 
-print("Novo Veiculo Cadastrado: ")
-print(f"Placa: {informacoes_princ} | Modelo: {informacoes_princ2} | Cor: {informacoes_princ3}")
+print("Novo Veículo Cadastrado:")
+print(f"Placa: {placa} | Modelo: {modelo} | Cor: {cor}")
 
 print("------------------------------------------------")
 
-print("Escolha o metodo de entrada.")
-print("Nossos sistemas. Ticket / Tag / Interfone.")
+print("Escolha o método de entrada.")
+print("Nossos sistemas: Ticket / Tag / Interfone")
 
-metodo_entrada = input("Digite o sistema de entrada:  ")
+metodo_entrada = input("Digite o sistema de entrada: ")
+
 print(f"O sistema de entrada escolhido foi '{metodo_entrada}'.")
 
 if metodo_entrada == "Ticket":
-    print("Sistema selecionado com sucesso, Pague antes de sair.")
-    hora_entrada = float(input("Digite a hora de entrada:  "))
-    valor_estacionamento = 15
-    hora_saida = float(input("Digite a hora da saída:  "))
-    total_permanencia = hora_saida - hora_entrada
-    total_estacionamento = total_permanencia * valor_estacionamento
-    print(f"Seu tempo de permanência: {total_permanencia} em horas.")
-    print(f"O valor a ser cobrado foi de R$:  {total_estacionamento:.2f}")
-    print("Devolver Ticket")
+
+    print("Sistema selecionado com sucesso.")
+    print("Pague antes de sair.")
+
+    hora_entrada = float(input("Digite a hora de entrada: "))
+    hora_saida = float(input("Digite a hora da saída: "))
+
+    if hora_saida < hora_entrada:
+            print("ERRO: Hora de saída não pode ser menor que a entrada.")
+
+    else:
+            valor_estacionamento = 15
+
+            total_permanencia = hora_saida - hora_entrada
+            total_estacionamento = total_permanencia * valor_estacionamento
+
+            print(f"Tempo de permanência: {total_permanencia} horas")
+            print(f"Valor a ser cobrado: R$ {total_estacionamento}")
+
+            print("Devolver Ticket")
+            print("Saída liberada!")
 
 elif metodo_entrada == "Tag":
-    print("Sua permanência no Shopping será cobrada na sua fatura.")
+
+    print("TAG identificada com sucesso.")
+    print("Sua permanência será cobrada na fatura.")
 
 elif metodo_entrada == "Interfone":
-    print("Liberando acesso pelo Interfone")
-    print("Sua saída deverá ser feita também pelo Interfone.")
 
-else: 
-    print("Obrigado pela visita, Volte Novamente.")
+    print("Liberando acesso pelo interfone.")
+    print("Sua saída deverá ser feita também pelo interfone.")
+
+else:
+
+    print("ERRO: Método de entrada inválido.")
