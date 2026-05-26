@@ -47,6 +47,8 @@ while True:
 
         print(f"O sistema de entrada escolhido foi '{metodo_entrada}'.")
 
+        total_permanencia = 0
+
         if metodo_entrada == "Ticket":
 
             print("Sistema selecionado com sucesso.")
@@ -56,19 +58,19 @@ while True:
             hora_saida = float(input("Digite a hora da saída: "))
 
             if hora_saida < hora_entrada:
-                    print("ERRO: Hora de saída não pode ser menor que a entrada.")
+                print("ERRO: Hora de saída não pode ser menor que a entrada.")
 
             else:
-                    valor_estacionamento = 15
+                valor_estacionamento = 15
 
-                    total_permanencia = hora_saida - hora_entrada
-                    total_estacionamento = total_permanencia * valor_estacionamento
+                total_permanencia = hora_saida - hora_entrada
+                total_estacionamento = total_permanencia * valor_estacionamento
 
-                    print(f"Tempo de permanência: {total_permanencia} horas")
-                    print(f"Valor a ser cobrado: R$ {total_estacionamento}")
+                print(f"Tempo de permanência: {total_permanencia} horas")
+                print(f"Valor a ser cobrado: R$ {total_estacionamento}")
 
-                    print("Devolver Ticket")
-                    print("Saída liberada!")
+                print("Devolver Ticket")
+                print("Saída liberada!")
 
         elif metodo_entrada == "Tag":
 
@@ -81,19 +83,20 @@ while True:
             print("Sua saída deverá ser feita também pelo interfone.")
 
         else:
-
             print("ERRO: Método de entrada inválido.")
 
+        print("--------------------------------------------------")
+        print("--------------------RELATÓRIO---------------------")
+        print("--------------------------------------------------")
+
+        print(f"Novo Veículo Registrado: {modelo}, {placa}, {cor}.")
+        print(f"Ele ficou {total_permanencia} horas dentro do nosso estacionamento.")
+
+        print("--------------------------------------------------")
+        print("--------------------------------------------------")
+
     except ValueError:
-        print("Erro Encontrado, Tente Novamente.")
+        print("Erro encontrado! Digite apenas números válidos.")
         continue
 
 # ----------------------------------------------------------------------------------------
-
-relatorio = input("")
-
-print("--------------------------------------------------")
-print("--------------------RELATÓRIO---------------------")
-print("--------------------------------------------------")
-
-
