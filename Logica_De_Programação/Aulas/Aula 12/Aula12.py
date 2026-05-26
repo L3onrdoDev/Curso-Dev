@@ -19,18 +19,19 @@ janela.geometry("800x600") #Largura x Altura
 
 # 2. Criar a função que o botão irá executar
 def mostrar_mensagem():
-    messagebox.showinfo("Sucesso!" "Você clicou no botão :)")
+    messagebox.showinfo("Sucesso!", "Você clicou no botão :)")
 
 # 3. Criar os componentes
 lbl_titulo_pagina = tk.Label(janela, text="Bem-Vindo a aula de Interface Gráfica!", font=("Arial", 14, "bold"))
 lbl_subtitulo_pagina = tk.Label(janela, text="Aula 12 - Desenvolvimento de paginas GUI.", font=("Arial", 10, "bold"))
 btn_clique_pagina = tk.Button(janela, text="Clique Aqui", font=("Arial", 14), bg="#4a53d1", fg="white", command=mostrar_mensagem)
+btn_fechar_janela = tk.Button(janela, text="Fechar", font=("Arial", 14), bg="#e74c3c", fg="white", command=janela.destroy)
 
 # 4. Posicionar os componentes na janela
 lbl_titulo_pagina.pack(pady=50) #pady adiciona um espaçamento verticial
 lbl_subtitulo_pagina.pack(pady=40)
 btn_clique_pagina.pack(pady=50)
-
+btn_fechar_janela.pack(pady=10)
 
 # 5. Rodar o loop da interface
 janela.mainloop()
