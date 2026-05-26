@@ -7,7 +7,7 @@ A base fundamental de todo desenvolvedor. Foco na resolução de problemas e con
 - **Algoritmos:** Sequencial, Condicional e Repetição.
 - **Estruturas de Dados:** Arrays (Listas), Matrizes e Dicionários.
 - **Modularização:** Funções e procedimentos.
-- **Linguagens Base:** Práticas iniciais com Python e C++.
+- **Linguagens Base:** Práticas iniciais com Python.
 
 ---
 *Estudos realizados no curso de Desenvolvimento de Sistemas - SENAI.*
