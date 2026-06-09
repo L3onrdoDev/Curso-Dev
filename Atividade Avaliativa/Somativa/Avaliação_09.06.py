@@ -52,7 +52,7 @@ from tkinter import messagebox, ttk
 
 #         producao_total = pecas_hora * 8
 
-#         resultado(text=f"Produção em 8 horas: {producao_total} peças")
+#           messagebox.showinfo("Informação", f"Produção em 8 horas: {producao_total} peças")
 
 #     except ValueError:
 #         messagebox.showerror("Erro","Digite um número válido!")
@@ -84,67 +84,200 @@ from tkinter import messagebox, ttk
 
 # 3. Conversor de Unidade: O sistema lê uma pressão em Bar. Converta para PSI (1 Bar
 # ≈ 14.5 PSI) e exiba com duas casas decimais.
-def calcular_pressao():
-    try:
-        bar = int(pressao.get())
+# def calcular_pressao():
+#     try:
+#         bar = float(pressao.get())
 
-        psi = bar * 14.5
-        resultado(text=f"Produção em 8 horas: {producao_total} peças")
+#         psi = bar * 14.5
 
-    except ValueError:
-        messagebox.showerror("Erro","Digite um número válido!")
+#         messagebox.showinfo("Informação", f"Pressão: {psi} PSI")
 
-janela = tk.Tk()
-janela.title("Conversor de Unidade")
-janela.geometry("800x600")
+#     except ValueError:
+#         messagebox.showerror("Erro", "Digite um número válido!")
 
-titulo = tk.Label(janela,text="Produção por Turno",font=("Arial", 14, "bold"))
-sub_titulo = tk.Label(janela,text="Digite a quantidade de peças produzidas em 1h",font=("Arial", 10, "bold"))
-titulo.pack(pady=10)
-sub_titulo.pack(pady=10)
+# janela = tk.Tk()
+# janela.title("Conversor de Unidade")
+# janela.geometry("800x600")
 
-tk.Label(janela,text="Peças produzidas por hora:")
+# titulo = tk.Label(janela,text="Conversor de Bar para PSI",font=("Arial", 14, "bold"))
+# titulo.pack(pady=10)
+# sub_titulo = tk.Label(janela,text="Digite a pressão em Bar",font=("Arial", 10))
+# sub_titulo.pack(pady=5)
 
-entrada_pecas = tk.Entry(janela)
-entrada_pecas.pack(pady=5)
+# pressao = tk.Entry(janela)
+# pressao.pack(pady=5)
 
-botao = tk.Button(janela,text="Calcular",command=calcular_pressao)
-botao.pack(pady=10)
+# botao = tk.Button(janela,text="Converter",command=calcular_pressao)
+# botao.pack(pady=10)
 
-resultado = tk.Label(janela,text="",font=("Arial", 12))
-resultado.pack(pady=10)
+# resultado = tk.Label(janela,text="",font=("Arial", 12))
+# resultado.pack(pady=10)
 
-btn_fechar_janela = tk.Button(janela, text="Fechar", font=("Arial", 14), bg="#e74c3c", fg="white", command=janela.destroy)
-btn_fechar_janela.pack(pady=15)
+# btn_fechar_janela = tk.Button(janela,text="Fechar",font=("Arial", 12),bg="#e74c3c",fg="white",command=janela.destroy)
+# btn_fechar_janela.pack(pady=15)
 
-pressao = tk.Entry(janela)
-pressao.pack(pady=5)
-
-janela.mainloop()
+# janela.mainloop()
 
 # 4. Média de Qualidade: Peça 3 notas de inspeção de uma peça (0 a 10). Exiba a média
 # aritmética simples delas.
+# def calcular_media():
+#     try:
+#         nota1 = float(entrada_nota1.get())
+#         nota2 = float(entrada_nota2.get())
+#         nota3 = float(entrada_nota3.get())
 
+#         media = (nota1 + nota2 + nota3) / 3
 
+#         messagebox.showinfo("Informação", f"Média de Qualidade: {media:.2f}")
+
+#     except ValueError:
+#         messagebox.showerror("Erro", "Digite apenas números válidos!")
+
+# janela = tk.Tk()
+# janela.title("Média de Qualidade")
+# janela.geometry("800x600")
+
+# titulo = tk.Label(janela,text="Média de Qualidade",font=("Arial", 14, "bold"))
+# titulo.pack(pady=10)
+
+# tk.Label(janela, text="Nota 1:").pack()
+# entrada_nota1 = tk.Entry(janela)
+# entrada_nota1.pack(pady=5)
+
+# tk.Label(janela, text="Nota 2:").pack()
+# entrada_nota2 = tk.Entry(janela)
+# entrada_nota2.pack(pady=5)
+
+# tk.Label(janela, text="Nota:").pack()
+# entrada_nota3 = tk.Entry(janela)
+# entrada_nota3.pack(pady=5)
+
+# botao = tk.Button(janela,text="Calcular Média",command=calcular_media)
+# botao.pack(pady=10)
+
+# resultado = tk.Label(janela, text="", font=("Arial", 12))
+# resultado.pack(pady=10)
+
+# btn_fechar = tk.Button(janela, text="Fechar", command=janela.destroy, bg="#e74c3c",fg="white")
+# btn_fechar.pack(pady=10)
+
+# janela.mainloop()
 
 # Foco: if, elif, else e operadores lógicos
 # 5. Termostato Inteligente: Peça a temperatura de um motor.
 # ● Abaixo de 40°C: "Baixa carga".
 # ● Entre 40°C e 70°C: "Normal".
 # ● Acima de 70°C: "ALERTA: Resfriamento Ativado!".
+# def verificar_temperatura():
+#     try:
+#         temperatura = float(entrada_temp.get())
 
+#         if temperatura < 40:
+#             messagebox.showinfo("Informação", "Baixa Carga")
+#         elif temperatura < 70:
+#             messagebox.showinfo("Informação", "Normal")
+#         else:
+#             messagebox.showwarning("Atenção", "ALERTA: Resfriamento Ativado!")
 
+#     except ValueError:
+#         messagebox.showerror("Erro", "Digite uma temperatura válida")
+
+# janela = tk.Tk()
+# janela.title("Termostato Inteligente")
+# janela.geometry("800x600")
+
+# titulo = tk.Label(janela, text="Monitoramento do Motor", font=("Arial", 14, "bold"))
+# titulo.pack(pady=10)
+
+# tk.Label(janela, text="Temperatura do motor (°C):").pack()
+
+# entrada_temp = tk.Entry(janela)
+# entrada_temp.pack(pady=5)
+
+# botao = tk.Button(janela, text="Verificar", command=verificar_temperatura)
+# botao.pack(pady=10)
+
+# resultado = tk.Label(janela,text="",font=("Arial", 12, "bold"))
+# resultado.pack(pady=10)
+
+# btn_fechar = tk.Button(janela, text="Fechar", command=janela.destroy, bg="#e74c3c", fg="white")
+# btn_fechar.pack(pady=10)
+
+# janela.mainloop()
 
 # 6. Classificador de Lotes: O usuário insere o código do produto. Se começar com "A",
 # exiba "Alimentos". Se "E", "Eletrônicos". Para qualquer outro, "Desconhecido".
+# def classificador_lotes():
 
+#     codigo = informacoes.get().upper()
 
+#     if codigo == ("A"):
+#         messagebox.showinfo("Informação", "Alimentos")
+
+#     elif codigo == ("E"):
+#         messagebox.showinfo("Informação", "Eletrônicos")
+
+#     else:
+#         messagebox.showwarning("Atenção", "Desconhecido")
+
+# janela = tk.Tk()
+# janela.title("Classificador de Lotes")
+# janela.geometry("800x600")
+
+# titulo = tk.Label(janela, text="Classificador de Lotes", font=("Arial", 14, "bold"))
+# titulo.pack(pady=10)
+
+# tk.Label(janela, text="Digite o código do produto:").pack()
+
+# informacoes = tk.Entry(janela)
+# informacoes.pack(pady=5)
+
+# botao = tk.Button(janela, text="Verificar", command=classificador_lotes)
+# botao.pack(pady=10)
+
+# resultado = tk.Label(janela, text="", font=("Arial", 12, "bold"))
+# resultado.pack(pady=10)
+
+# btn_fechar = tk.Button(janela, text="Fechar", command=janela.destroy, bg="#e74c3c", fg="white")
+# btn_fechar.pack(pady=10)
+
+# janela.mainloop()
 
 # 7. Segurança de Operação: A máquina só liga se o sensor_porta == "fechada" E o
 # botao_emergencia == "desligado". Peça esses dois inputs e diga se a máquina pode
 # iniciar.
+def verificar_maquina():
 
+    sensor_porta = entrada_porta.get().lower()
+    botao_emergencia = entrada_emergencia.get().lower()
 
+    if sensor_porta == "fechada" and botao_emergencia == "desligado":
+        messagebox.showinfo("Status", "Máquina pode iniciar.")
+    else:
+        messagebox.showwarning("Status", "Máquina não pode iniciar.")
+
+janela = tk.Tk()
+janela.title("Segurança de Operação")
+janela.geometry("800x600")
+
+titulo = tk.Label(janela, text="Segurança de Operação", font=("Arial", 14, "bold"))
+titulo.pack(pady=10)
+
+tk.Label(janela, text="Sensor da porta (fechada/aberta):").pack()
+entrada_porta = tk.Entry(janela)
+entrada_porta.pack(pady=5)
+
+tk.Label(janela, text="Botão de emergência (desligado/ligado):").pack()
+entrada_emergencia = tk.Entry(janela)
+entrada_emergencia.pack(pady=5)
+
+botao = tk.Button(janela, text="Verificar", command=verificar_maquina)
+botao.pack(pady=10)
+
+btn_fechar = tk.Button(janela ,text="Fechar" ,command=janela.destroy, bg="#e74c3c", fg="white")
+btn_fechar.pack(pady=10)
+
+janela.mainloop()
 
 # 8. Cálculo de Descarte: Peça o total de peças produzidas e o total de defeituosas. Se
 # o descarte for maior que 5% do total, exiba "Revisar Processo", caso contrário,
