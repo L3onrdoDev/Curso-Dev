@@ -298,7 +298,7 @@ janela.mainloop()
 
 # 11.Soma de Produção (Acumulador): Use um while para pedir o peso de várias caixas.
 # O loop para quando o usuário digitar 0. No fim, mostre o peso total acumulado.
-
+    
 
 
 # 12.Múltiplas Leituras: Use um for para pedir a temperatura de 5 sensores diferentes.
