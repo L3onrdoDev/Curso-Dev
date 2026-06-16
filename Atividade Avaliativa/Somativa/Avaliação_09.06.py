@@ -20,7 +20,6 @@ from tkinter import messagebox, ttk
 # janela = tk.Tk()
 # janela.title("Painel Login - Operador")
 # janela.geometry("800x600")
-# janela.configure(bg="black")
 
 # # Componentes
 # lbl_mensagem = tk.Label(janela, text="Digite seu nome")
@@ -52,7 +51,7 @@ from tkinter import messagebox, ttk
 
 #         producao_total = pecas_hora * 8
 
-#           messagebox.showinfo("Informação", f"Produção em 8 horas: {producao_total} peças")
+#         messagebox.showinfo("Informação", f"Produção em 8 horas: {producao_total} peças")
 
 #     except ValueError:
 #         messagebox.showerror("Erro","Digite um número válido!")
@@ -246,60 +245,154 @@ from tkinter import messagebox, ttk
 # 7. Segurança de Operação: A máquina só liga se o sensor_porta == "fechada" E o
 # botao_emergencia == "desligado". Peça esses dois inputs e diga se a máquina pode
 # iniciar.
-def verificar_maquina():
+# def verificar_maquina():
 
-    sensor_porta = entrada_porta.get().lower()
-    botao_emergencia = entrada_emergencia.get().lower()
+#     sensor_porta = entrada_porta.get()
+#     botao_emergencia = entrada_emergencia.get()
 
-    if sensor_porta == "fechada" and botao_emergencia == "desligado":
-        messagebox.showinfo("Status", "Máquina pode iniciar.")
-    else:
-        messagebox.showwarning("Status", "Máquina não pode iniciar.")
+#     if sensor_porta == "fechada" and botao_emergencia == "desligado":
+#         messagebox.showinfo("Status", "Máquina pode iniciar.")
+#     else:
+#         messagebox.showwarning("Status", "Máquina não pode iniciar.")
 
-janela = tk.Tk()
-janela.title("Segurança de Operação")
-janela.geometry("800x600")
+# janela = tk.Tk()
+# janela.title("Segurança de Operação")
+# janela.geometry("800x600")
 
-titulo = tk.Label(janela, text="Segurança de Operação", font=("Arial", 14, "bold"))
-titulo.pack(pady=10)
+# titulo = tk.Label(janela, text="Segurança de Operação", font=("Arial", 14, "bold"))
+# titulo.pack(pady=10)
 
-tk.Label(janela, text="Sensor da porta (fechada/aberta):").pack()
-entrada_porta = tk.Entry(janela)
-entrada_porta.pack(pady=5)
+# tk.Label(janela, text="Sensor da porta (fechada/aberta):").pack()
+# entrada_porta = tk.Entry(janela)
+# entrada_porta.pack(pady=5)
 
-tk.Label(janela, text="Botão de emergência (desligado/ligado):").pack()
-entrada_emergencia = tk.Entry(janela)
-entrada_emergencia.pack(pady=5)
+# tk.Label(janela, text="Botão de emergência (desligado/ligado):").pack()
+# entrada_emergencia = tk.Entry(janela)
+# entrada_emergencia.pack(pady=5)
 
-botao = tk.Button(janela, text="Verificar", command=verificar_maquina)
-botao.pack(pady=10)
+# botao = tk.Button(janela, text="Verificar", command=verificar_maquina)
+# botao.pack(pady=10)
 
-btn_fechar = tk.Button(janela ,text="Fechar" ,command=janela.destroy, bg="#e74c3c", fg="white")
-btn_fechar.pack(pady=10)
+# btn_fechar = tk.Button(janela ,text="Fechar" ,command=janela.destroy, bg="#e74c3c", fg="white")
+# btn_fechar.pack(pady=10)
 
-janela.mainloop()
+# janela.mainloop()
 
 # 8. Cálculo de Descarte: Peça o total de peças produzidas e o total de defeituosas. Se
 # o descarte for maior que 5% do total, exiba "Revisar Processo", caso contrário,
 # "Processo Otimizado".
 
+# def total_codigo():
 
+#         peca = float(total_peca.get())
+#         peca_defeituosa = float(total_defeituosa.get())
+        
+#         percentual_defeito = (peca_defeituosa / peca) * 100
+        
+#         if percentual_defeito > 5:
+#             messagebox.showwarning("Status", "Revisar Processo.")
+#         else:
+#             messagebox.showinfo("Status", "Processo Otimizado.")
+
+# janela = tk.Tk()
+# janela.title("Cálculo de Descarte")
+# janela.geometry("800x600")
+
+# tk.Label(janela, text="Peças Produzidas:").pack()
+# total_peca = tk.Entry(janela)
+# total_peca.pack(pady=5)
+
+# tk.Label(janela, text="Peças Defeituosas:").pack()
+# total_defeituosa = tk.Entry(janela)
+# total_defeituosa.pack(pady=5)
+
+# botao = tk.Button(janela, text="Verificar", command=total_codigo)
+# botao.pack(pady=10)
+
+# btn_fechar = tk.Button(janela ,text="Fechar" ,command=janela.destroy, bg="#e74c3c", fg="white")
+# btn_fechar.pack(pady=10)
+
+# janela.mainloop()
 
 # 9. Validação de Medida: Uma peça deve ter entre 9.8mm e 10.2mm. Peça a medida e
 # diga se está dentro da tolerância, acima ou abaixo.
 
+# def validar_medida():
+#     medida = float(medida_peca.get())
+    
+#     if 9.8 <= medida <= 10.2:
+#         messagebox.showinfo("Status", "Medida dentro da tolerância.")
+#     elif medida < 9.8:
+#         messagebox.showwarning("Status", "Medida abaixo da tolerância.")
+#     else:
+#         messagebox.showwarning("Status", "Medida acima da tolerância.")
 
+# janela = tk.Tk()
+# janela.title("Validação de Medida")
+# janela.geometry("800x600")
+
+# tk.Label(janela, text="Medida da Peça (mm):").pack()
+# medida_peca = tk.Entry(janela)
+# medida_peca.pack(pady=5)
+
+# botao = tk.Button(janela, text="Verificar", command=validar_medida)
+# botao.pack(pady=10)
+
+# btn_fechar = tk.Button(janela ,text="Fechar" ,command=janela.destroy, bg="#e74c3c", fg="white")
+# btn_fechar.pack(pady=10)
+
+# janela.mainloop()
 
 # Foco: for e while
 # 10.Contagem Regressiva de Setup: Use um for para fazer uma contagem regressiva
 # de 10 até 1 para o início de uma prensa, e finalize com "Prensa Ativada!".
 
+# def total_codigo():
+#     for i in range(10, 0, -1):
+#         messagebox.showinfo("Informação", f"Contagem Regressiva: {i} segundos restantes...")
+#     messagebox.showinfo("Informação", "Prensa Ativada! Boa produção!")
 
+# janela = tk.Tk()
+# janela.title("Contagem Regressiva de Setup")
+# janela.geometry("800x600")
+
+# titulo = tk.Label(janela,text="Contagem Regressiva de Setup",font=("Arial", 14, "bold"))
+# sub_titulo = tk.Label(janela,text="Obrigado por utilizar nosso sistema!",font=("Arial", 8, "bold"))
+# titulo.pack(pady=10)
+# sub_titulo.pack(pady=10)
+
+# botao = tk.Button(janela, text="Verificar", command=total_codigo)
+# botao.pack(pady=10)
+
+# btn_fechar = tk.Button(janela ,text="Fechar" ,command=janela.destroy, bg="#e74c3c", fg="white")
+# btn_fechar.pack(pady=10)
+
+# janela.mainloop()
 
 # 11.Soma de Produção (Acumulador): Use um while para pedir o peso de várias caixas.
 # O loop para quando o usuário digitar 0. No fim, mostre o peso total acumulado.
-    
 
+# total = 0.0
+
+# def somar():
+#     peso = float(entrada.get())
+    
+#     if peso == 0:
+#         messagebox.showinfo("Resultado Final", total)
+#     else:
+#         total = total + peso
+#         messagebox.showinfo("Acumulado", total)
+
+# janela = tk.Tk()
+# janela.title("Soma de Produção (Acumulador)")
+# janela.geometry("800x600")
+
+# tk.Label(janela, text="Peso da caixa (0 para parar):", font=("Arial", 14)).pack(pady=20)
+# entrada = tk.Entry(janela, font=("Arial", 14))
+# entrada.pack(pady=10)
+# tk.Button(janela, text="Somar", command=somar, font=("Arial", 14)).pack(pady=20)
+
+# janela.mainloop()
 
 # 12.Múltiplas Leituras: Use um for para pedir a temperatura de 5 sensores diferentes.
 # Ao final, mostre qual foi a maior temperatura lida.
